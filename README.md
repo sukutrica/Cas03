@@ -4,8 +4,7 @@ Ime  VARCHAR (15) NOT NULL,
 Prezime  VARCHAR (15) NOT NULL,
 Komentar  TEXT
 );
-DROP TABLE student	/*KOMENTAR - pravi tabelu
-*/
+DROP TABLE student	/*KOMENTAR - pravi tabelu*/
 
 INSERT INTO student VALUES('001','Veljko','Krstic');
 INSERT INTO student VALUES('002','Dragan','Danilovic');
@@ -16,3 +15,16 @@ INSERT INTO student VALUES('005','Draganu','Danilovic','nema pernicu');
 SELECT *
 FROM student
 WHERE prezime='Danilovic'
+
+SELECT komentar  			/*Svi komentari sa prezimenom Danilovic*/
+FROM student
+WHERE prezime='Danilovic'
+
+SELECT komentar as Komentari 			/*Menjamo naziv polja komentar*/
+FROM student
+WHERE prezime='Danilovic'
+
+SELECT * 							/*SELEKTUJEMO SVE SA IC*/
+FROM student
+WHERE prezime LIKE '%ic'			/* % zamenjuje deo teksta ispred*/
+
